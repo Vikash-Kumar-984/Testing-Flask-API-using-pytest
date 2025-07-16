@@ -68,9 +68,74 @@ If PowerShell is blocking script execution, which includes the activate.ps1 scri
 
 This will now work and allow script activation.
 
+# HTTP Response Status Code
+
+# Successful Responses:
+
+**200 OK:**
+
+The request was successful, and the server returned the requested data. This is the standard response for a successful API call. 
 
 
+**201 Created:**
 
+The request was successful, and a new resource was created on the server (e.g., after a POST request). 
+
+
+**204 No Content:**
+
+The request was successful, but there is no content to send back in the response body. 
+
+
+# Client Error Responses (4xx):
+
+**400 Bad Request:**
+
+The server could not understand the request due to invalid syntax or missing parameters.
+
+**401 Unauthorized:**
+
+The request requires authentication, but the provided credentials are not valid or missing. This often means the user is not logged in or their session has expired.
+
+**403 Forbidden:**
+
+The server understands the request, but it's refusing to authorize it. This usually means the user is authenticated but lacks the necessary permissions to access the resource.
+
+**404 Not Found:**
+
+The requested resource could not be found on the server.
+
+**405 Method Not Allowed:**
+
+The HTTP method used (e.g., POST, GET, PUT) is not supported for the requested resource.
+
+**429 Too Many Requests:**
+
+The client has sent too many requests in a given amount of time and has been rate-limited. 
+
+# Server Error Responses (5xx):
+
+**500 Internal Server Error:**
+
+ An unexpected error occurred on the server while processing the request.
+
+**503 Service Unavailable:**
+
+ The server is currently unavailable, possibly due to maintenance or overload. 
+
+
+# Authentication-Specific Considerations:
+
+**401 Unauthorized:**
+
+This is the most direct response for authentication failures. If a user attempts to access a protected resource without providing valid credentials, they will receive a 401.
+
+**403 Forbidden:**
+If a user is authenticated but does not have the necessary permissions to access a particular resource, the server will typically return a 403.
+
+**401 vs 403:**
+
+The distinction between 401 and 403 can be subtle. Generally, 401 indicates a lack of authentication credentials, while 403 indicates a lack of authorization, even with valid credentials. 
 
 # Git Setup
 
