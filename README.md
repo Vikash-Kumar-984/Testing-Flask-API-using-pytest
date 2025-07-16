@@ -1,4 +1,4 @@
-# Machine-Learning-Model-API-Frontend-and-Backend
+# Testing-Flask-API-using-pytest
 
 This repository contains the end to end project of frontend and backend for Machine Learning Model (APIs) on babies.csv dataset.
 
@@ -11,6 +11,66 @@ Serialization: It converts the whole code into the binary format to the pickel f
 pip freeze > requirements.txt : To import all the requirements(like pandas, scikit-learn, gunicorn,etc.) to requirements.txt file
 
 model.pkl will be moved from model folder to home folder
+
+# Uninstall Incompatible Packages
+
+* pip uninstall numpy pandas matplotlib -y
+
+# Reinstall Clean Versions
+
+* pip install --upgrade pip setuptools wheel
+
+* pip install numpy pandas matplotlib
+
+# Restart VS Code
+
+After installation:
+
+  * Close all terminals
+
+  * Restart VS Code
+
+  * Open your project again
+
+# Pro Tip: Use a Virtual Environment
+
+To avoid these issues in the future, create a project-specific environment:
+
+* python -m venv venv
+
+* .\venv\Scripts\activate      <!--# Windows-->
+
+* pip install numpy pandas matplotlib
+
+Then in VS Code:
+
+    * Open Command Palette (Ctrl+Shift+P)
+
+    * Type Python: Select Interpreter
+
+    * Choose your venv environment
+
+# Other error (.\myvenv\Scripts\activate) Failed in terminal
+
+If PowerShell is blocking script execution, which includes the activate.ps1 script used to activate Python virtual environments on Windows.
+
+1. Open a new PowerShell terminal in VS Code as usual
+
+2. Run this command in the terminal:
+
+     * Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+3. Type Y when prompted, then press Enter
+
+4. Now try again:
+
+    * .\myvenv\Scripts\activate
+
+This will now work and allow script activation.
+
+
+
+
 
 # Git Setup
 
